@@ -1,6 +1,6 @@
 # Pocket Astrologer
 
-> personal astrologer at your fingertips
+> Personal Astrologer At Your Fingertips
 
 ## Usage
 
