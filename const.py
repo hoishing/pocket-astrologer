@@ -1,7 +1,9 @@
-"""constants"""
+"""app constants"""
 
-from pathlib import Path
+import pandas as pd
 import streamlit as st
+from natal import Data
+from pathlib import Path
 
 SOURCE_CODE = """\
 ![github](https://api.iconify.design/bi/github.svg?color=%236FD886&width=20) &nbsp;
@@ -21,6 +23,19 @@ PAGE_CONFIG = dict(
 )
 
 
-@st.cache_data
-def get_logo():
-    return (Path(__file__).parent / "static" / "banner.svg").read_text()
+@st.cache_resource
+def site_logo() -> str:
+    return (Path(__file__).parent / "static/banner.svg").read_text()
+
+
+@st.cache_resource
+def cities_df() -> pd.DataFrame:
+    """cities df with columns: name, pop, timezone, country, lat, lon"""
+    # skip the first 25 rows, which are Chinese
+    return Data.get_cities().iloc[26:]
+
+
+@st.cache_resource
+def city_names() -> list[str]:
+    """list of city names, sorted by population"""
+    return cities_df()["name"].tolist()

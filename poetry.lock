@@ -811,13 +811,13 @@ pyspark = ["pyspark (>=3.3.0)"]
 
 [[package]]
 name = "natal"
-version = "0.8.6"
+version = "0.8.8"
 description = "create Natal Chart with ease"
 optional = false
 python-versions = "<3.13,>=3.12"
 files = [
-    {file = "natal-0.8.6-py3-none-any.whl", hash = "sha256:4204b0058b05bbf0e7040a782b7b3564bd558586310be2a48d59547ce783b64e"},
-    {file = "natal-0.8.6.tar.gz", hash = "sha256:0dd497244b394241b25e4a321985445b24abda8a7dbd8654066e7af8ac1f3b74"},
+    {file = "natal-0.8.8-py3-none-any.whl", hash = "sha256:b487b261c788be5bd20bd6ccffea5e0e053c06228cbb7539856e3b72f3867baa"},
+    {file = "natal-0.8.8.tar.gz", hash = "sha256:0b208d3b58ea8fa11e530b0929e46429f8038fb7116a162e9e066cf6a732627a"},
 ]
 
 [package.dependencies]
