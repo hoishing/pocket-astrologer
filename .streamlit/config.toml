@@ -1,0 +1,14 @@
+[server]
+enableStaticServing = true
+runOnSave = true
+enableCORS = false
+enableXsrfProtection = false
+
+[theme]
+base = "dark"
+primaryColor = "#ffbf00"
+backgroundColor = "#212529"
+secondaryBackgroundColor = "#343a40"
+
+[browser]
+gatherUsageStats = false

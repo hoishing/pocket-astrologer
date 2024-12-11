@@ -24,11 +24,6 @@ PAGE_CONFIG = dict(
 
 
 @st.cache_resource
-def site_logo() -> str:
-    return (Path(__file__).parent / "static/banner.svg").read_text()
-
-
-@st.cache_resource
 def cities_df() -> pd.DataFrame:
     """cities df with columns: name, pop, timezone, country, lat, lon"""
     # skip the first 25 rows, which are Chinese
