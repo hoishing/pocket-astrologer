@@ -22,6 +22,8 @@ PAGE_CONFIG = dict(
     },
 )
 
+STYLE = f"<style>{Path("style.css").read_text()}</style>"
+
 
 @st.cache_resource
 def cities_df() -> pd.DataFrame:
@@ -31,6 +33,7 @@ def cities_df() -> pd.DataFrame:
 
 
 @st.cache_resource
-def city_names() -> list[str]:
-    """list of city names, sorted by population"""
-    return cities_df()["name"].tolist()
+def cities_with_code() -> list[str]:
+    """list of city's `name - timezone`, sorted by population"""
+    df = cities_df()
+    return df["name"] + " - " + df["country"]
